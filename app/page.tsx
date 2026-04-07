@@ -7,12 +7,25 @@ const Home = () => {
   const [message, setMessage] = useState("");
 
   const handleClick = async () => {
-    const message = await aiApi();
-    setMessage(message);
+    try {
+      const msg = await aiApi();
+      setMessage(msg);
+    } catch (e: any) {
+      setMessage(e.message);
+    }
   };
 
-  handleClick();
-  return <div>message: {message}</div>;
+  return (
+    <div className="w-full h-screen flex flex-col items-center p-40 gap-20">
+      <p className="text-2xl">message: {message}</p>
+      <button
+        onClick={handleClick}
+        className="bg-black text-white p-4 rounded-md"
+      >
+        see results
+      </button>
+    </div>
+  );
 };
 
 export default Home;
