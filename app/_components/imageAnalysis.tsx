@@ -42,7 +42,7 @@ export const ImageAnalysis = ({
 
       <div className="space-y-3">
         <p className="text-sm text-muted-foreground">
-          Upload a food photo, and AI will detect the ingredients.
+          Upload a food photo, and AI will detect the items.
         </p>
         <input
           type="file"

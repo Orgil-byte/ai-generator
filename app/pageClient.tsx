@@ -53,14 +53,16 @@ export const MainClient = () => {
             setResult={setResult}
           />
         ) : null}
-        {loading ? (
-          <div className="w-full flex justify-center">
-            <p>Wait! Image loading...</p>
-            <LoaderCircle className="animate-spin" />
-          </div>
-        ) : image === "" ? null : (
-          <img src={image} alt="image" />
-        )}
+        {activeSection === "generator" ? (
+          loading ? (
+            <div className="w-full flex justify-center">
+              <p>Wait! Image loading...</p>
+              <LoaderCircle className="animate-spin" />
+            </div>
+          ) : image === "" ? null : (
+            <img src={image} alt="image" />
+          )
+        ) : null}
       </div>
     </div>
   );
