@@ -70,7 +70,7 @@ export const ImageAnalysis = ({
         {result ? (
           <Card className="rounded-xl border border-border">
             <CardContent className="p-4">
-              <p className="text-sm leading-relaxed">result</p>
+              <p className="text-sm leading-relaxed">{result}</p>
             </CardContent>
           </Card>
         ) : (
