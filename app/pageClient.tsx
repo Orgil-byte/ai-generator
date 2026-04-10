@@ -6,6 +6,7 @@ import { InferenceClient } from "@huggingface/inference";
 import { LoaderCircle } from "lucide-react";
 import { ImageAnalysis } from "./_components/imageAnalysis";
 import { ChatCompletionOutputMessage } from "@huggingface/tasks";
+import { MessengerButton } from "./_components/chatAgent";
 
 export const MainClient = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -111,6 +112,7 @@ export const MainClient = () => {
           )
         ) : null}
       </div>
+      <MessengerButton />
     </div>
   );
 };
